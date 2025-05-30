@@ -1,6 +1,6 @@
 import streamlit as st
 
-st.title("창호 디자인 추천 시스템 (Prototype)")
+st.title(" W.D.P.T(Window Design Prototype Tool) ")
 
 # 사용자 입력 받기
 width = st.number_input("창호 가로 길이 (mm)", min_value=100, max_value=3000, value=1200)
@@ -38,7 +38,7 @@ def recommend_params(width, height):
         "채광 등급": "높음" if area > 1500000 else "중간"
     }
 
-if st.button("창호 디자인 생성"):
+if st.button("AI 맞춤형 창호 생성"):
     result = recommend_params(width, height)
     st.subheader("🎨 추천된 창호 디자인 파라미터")
     for key, value in result.items():
